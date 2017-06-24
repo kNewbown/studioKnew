@@ -52,10 +52,11 @@ header h1 {
 
 /*Article Heading*/
 h2 {
-    margin: 1rem;
-    font-size: 1.5em;
+    margin-bottom: 5rem;
+    font-size: 2em;
+    font-weight: 600;
     letter-spacing: 0;
-    color: #f3b17e;
+    color: #fff;
 }
 
 /*Links*/
@@ -171,6 +172,12 @@ footer {
                     background-color: rgba(0,0,0,.3);
                 }
 
+/* Section - About/Contact
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#about p,
+#contact p {
+    font-size: 2em;
+}
 
 /* Media Queries (Mobile first)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
