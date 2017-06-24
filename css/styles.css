@@ -31,33 +31,31 @@ body {
 
 /*Logo*/
 header h1 {
+    margin: 20rem 1rem 20rem;
     font-family: 'Amaranth', sans-serif;
     font-size: 5em;
     font-weight: 600;
-    color: #fff;
     line-height: .65em;
     letter-spacing: 0;
-    margin: 20rem 1rem 20rem;
+    color: #fff;
 }
     header h1 .highlight {
-        color: #f3b17e;
         font-size: .8em;
         font-weight: 400;
+        color: #f3b17e;
     }
-    header h1 a {
-        color: #fff;
-        text-decoration: none;
-    }
+    header h1 a,
     header h1 a:hover {
+        text-decoration: none;
         color: #fff;
     }
 
 /*Article Heading*/
 h2 {
-    font-size: 1.5em;
-    color: #f3b17e;
     margin: 1rem;
+    font-size: 1.5em;
     letter-spacing: 0;
+    color: #f3b17e;
 }
 
 /*Links*/
@@ -71,25 +69,24 @@ a:active {
     color: #fff;
 }
 .activeNav {
-    color: #fff;
     cursor: default;
+    color: #fff;
 }
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 nav {
     text-align: right;
 }
-nav ul {
-    margin: 0;
-}
-    nav li {
-        display: inline;
-        list-style-type: none;
-        font-size: 1em;
-        margin-right: 1rem;
+    nav ul {
+        margin: 0;
     }
+        nav li {
+            display: inline;
+            margin-right: 1rem;
+            font-size: 1em;
+            list-style-type: none;
+        }
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -97,82 +94,81 @@ footer {
     text-align: center;
 }
     footer a {
-        margin: 1rem 0;
         display: inline-block;
+        margin: 1rem 0;
     }
 
 /* Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .container {
     padding: 0;
 }
 
-/* Section - Portfolio
+/* Section - Portfolio (index)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .portfolioItem {
-    width: 100%;
-    margin: 0;
+    position: relative; 
     display: block;
     float: left;
+    width: 100%;
+    margin: 0;
     background-color: #A7DBD8;
-    position: relative; 
 }
     .portfolioUnclicked {
         display: block;
         max-width: 100%;
         filter: grayscale(100%) opacity(60%) contrast(120%);
         -webkit-filter: grayscale(100%) opacity(60%) contrast(120%);
-    }
-    #portfolio img:hover {
         cursor: pointer;
-        filter: grayscale(0%) opacity(100%) contrast(100%);
-        -webkit-filter: grayscale(0%) opacity(100%) contrast(100%);
     }
-    .portfolioClicked {
-        cursor: pointer;
-        filter: grayscale(0%) opacity(100%) contrast(100%);
-        -webkit-filter: grayscale(0%) opacity(100%) contrast(100%);
-    }
+        #portfolio img:hover,
+        .portfolioClicked {
+            filter: grayscale(0%) opacity(100%) contrast(100%);
+            -webkit-filter: grayscale(0%) opacity(100%) contrast(100%);
+        }
+        .portfolioClicked {
+            cursor: auto;
+        }
     .portfolioItemOverlay {
         display: none;
     }
-    .portfolioItemOverlayShow {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        z-index: 10;
-        background-color: rgba(0,0,0,.6);
-        text-align: left;
-        display: block;
-        padding: 1rem;
-        box-sizing: border-box;
-        pointer-events: none;
-    }
-        .portfolioItemOverlayShow h3,
-        .portfolioItemOverlayShow p,
-        .portfolioItemOverlayShow button {
-            margin: 0;
-            
-        }
-        .portfolioItemOverlayShow p {
-            margin-bottom: 1rem;
-        }
-        .portfolioItemOverlayShow button {
-            bottom: 2rem;
-            margin-bottom: 0;
+        .portfolioItemOverlayShow {
+            position: absolute;
+            bottom: 0;
+            z-index: 10;
             display: block;
-            height: auto;
-            font-size: inherit;
-            color: #fff;
-            font-weight: 300;
-            line-height: inherit;
-            padding: 1rem 3rem;
-            letter-spacing: 0;
-            border-radius: 0;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 1rem;
+            background-color: rgba(0,0,0,.6);
+            text-align: left;
         }
+            .portfolioItemOverlayShow h3,
+            .portfolioItemOverlayShow p,
+            .portfolioItemOverlayShow button {
+                margin: 0;
 
+            }
+            .portfolioItemOverlayShow p {
+                margin-bottom: 1rem;
+            }
+            .portfolioItemOverlayShow button {
+                display: block;
+                height: auto;
+                margin-bottom: 0;
+                padding: 1rem 3rem;
+                font-size: inherit;
+                font-weight: 300;
+                letter-spacing: 0;
+                line-height: inherit;
+                border: 1px solid #fff;
+                border-radius: 0;
+                color: #fff;
+            }
+                .portfolioItemOverlayShow button:hover {
+                    border-color: #888;
+                    background-color: rgba(0,0,0,.3);
+                }
 
 
 /* Media Queries (Mobile first)
