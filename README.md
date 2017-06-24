@@ -1,2 +1,0 @@
-# studioKnew
-Personal portfolio
