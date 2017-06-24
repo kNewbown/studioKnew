@@ -152,20 +152,21 @@ footer {
             .portfolioItemOverlayShow p {
                 margin-bottom: 1rem;
             }
-            .portfolioItemOverlayShow button {
-                display: block;
+            .portfolioButton {
+                display: inline-block;
                 height: auto;
                 margin-bottom: 0;
                 padding: 1rem 3rem;
-                font-size: inherit;
+                font-size: .75em;
                 font-weight: 300;
                 letter-spacing: 0;
                 line-height: inherit;
+                text-transform: uppercase;
                 border: 1px solid #fff;
                 border-radius: 0;
                 color: #fff;
             }
-                .portfolioItemOverlayShow button:hover {
+                .portfolioButton:hover {
                     border-color: #888;
                     background-color: rgba(0,0,0,.3);
                 }
