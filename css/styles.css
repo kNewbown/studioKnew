@@ -1,0 +1,236 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Colours
+- Base Styles
+- Typography
+- Header
+- Footer
+- Section
+- Media Queries
+*/
+
+/* Colours
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
+- Dark Orange   #FA6900
+- Light Orange  #f3b17e
+- Dark Blue     #69D2E7
+- Light Blue    #A7DBD8
+- Off white     #E0E4CC
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+    color: #E0E4CC;
+    background: #FA6900;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/*Logo*/
+header h1 {
+    font-family: 'Amaranth', sans-serif;
+    font-size: 5em;
+    font-weight: 600;
+    color: #fff;
+    line-height: .65em;
+    letter-spacing: 0;
+    margin: 20rem 1rem 20rem;
+}
+    header h1 .highlight {
+        color: #f3b17e;
+        font-size: .8em;
+        font-weight: 400;
+    }
+    header h1 a {
+        color: #fff;
+        text-decoration: none;
+    }
+    header h1 a:hover {
+        color: #fff;
+    }
+
+/*Article Heading*/
+h2 {
+    font-size: 1.5em;
+    color: #f3b17e;
+    margin: 1rem;
+    letter-spacing: 0;
+}
+
+/*Links*/
+a {
+    text-decoration: none;
+    color: #f3b17e;
+}
+a:hover,
+a:focus,
+a:active {
+    color: #fff;
+}
+.activeNav {
+    color: #fff;
+    cursor: default;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+nav {
+    text-align: right;
+}
+nav ul {
+    margin: 0;
+}
+    nav li {
+        display: inline;
+        list-style-type: none;
+        font-size: 1em;
+        margin-right: 1rem;
+    }
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+    text-align: center;
+}
+    footer a {
+        margin: 1rem 0;
+        display: inline-block;
+    }
+
+/* Section
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container {
+    padding: 0;
+}
+
+/* Section - Portfolio
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.portfolioItem {
+    width: 100%;
+    margin: 0;
+    display: block;
+    float: left;
+    background-color: #A7DBD8;
+    position: relative; 
+}
+    .portfolioUnclicked {
+        display: block;
+        max-width: 100%;
+        filter: grayscale(100%) opacity(60%) contrast(120%);
+        -webkit-filter: grayscale(100%) opacity(60%) contrast(120%);
+    }
+    #portfolio img:hover {
+        cursor: pointer;
+        filter: grayscale(0%) opacity(100%) contrast(100%);
+        -webkit-filter: grayscale(0%) opacity(100%) contrast(100%);
+    }
+    .portfolioClicked {
+        cursor: pointer;
+        filter: grayscale(0%) opacity(100%) contrast(100%);
+        -webkit-filter: grayscale(0%) opacity(100%) contrast(100%);
+    }
+    .portfolioItemOverlay {
+        display: none;
+    }
+    .portfolioItemOverlayShow {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: rgba(0,0,0,.6);
+        text-align: left;
+        display: block;
+        padding: 1rem;
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+        .portfolioItemOverlayShow h3,
+        .portfolioItemOverlayShow p,
+        .portfolioItemOverlayShow button {
+            margin: 0;
+            
+        }
+        .portfolioItemOverlayShow p {
+            margin-bottom: 1rem;
+        }
+        .portfolioItemOverlayShow button {
+            bottom: 2rem;
+            margin-bottom: 0;
+            display: block;
+            height: auto;
+            font-size: inherit;
+            color: #fff;
+            font-weight: 300;
+            line-height: inherit;
+            padding: 1rem 3rem;
+            letter-spacing: 0;
+            border-radius: 0;
+        }
+
+
+
+/* Media Queries (Mobile first)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+    .container {
+        width: 100%;
+    }
+    header h1 {
+        font-size: 6em;
+    }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+    .container {
+        width: 80%;
+    }
+    header h1 {
+        font-size: 8em;
+    }
+    nav li {
+        font-size: 1.3em;
+        margin-right: 0;
+        margin-left: 1.3rem;
+    }
+    .portfolioItem {
+        width: 50%; 
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    nav li {
+        font-size: 1.5em;
+        margin-left: 1.5rem;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    header h1 {
+        font-size: 10em;
+    }
+    nav li {
+        font-size: 2em;
+        margin-left: 2rem;
+    }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+    .portfolioItem {
+        width: 25%; 
+    }
+    footer a {
+        display: none;
+    }
+}
